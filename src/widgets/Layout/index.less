@@ -1,0 +1,39 @@
+@import "~ui-variables";
+
+@header-height: 60px;
+
+.layout {
+  display: flex;
+}
+
+.layout__sidebar {
+  position: relative;
+  background-color: @ui-color-slate;
+  flex-shrink: 0;
+  transition: all .2s;
+  font-weight: @ui-fontweight-medium;
+  .chinese {
+    font-size: 12px;
+    margin-left: 6px;
+    font-weight: normal;
+  }
+}
+
+.layout__content {
+  flex-grow: 1;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: @ui-color-gray-lightest;
+}
+
+.layout__toggle {
+  display: none;
+}
+
+.layout--open {
+  .layout__sidebar {
+    transform: translate(0, 0);
+  }
+}
