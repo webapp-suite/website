@@ -1,0 +1,147 @@
+@import "~ui-variables";
+@import "~ui-mixins";
+@import "../Code/index.less";
+
+.markdown {
+  line-height: 22px;
+  & > a, & > p a {
+    color: @ui-color-blue;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  & > ul li, & > ol li {
+    margin-left: @ui-unit-half * 1.5;
+    margin-bottom: @ui-unit-quarter;
+  }
+  & > h2 {
+    border-bottom: 1px solid @ui-color-gray-light;
+    padding-bottom: @ui-unit-half * 1.5;
+    line-height: 22px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  & > h6 {
+    color: #777;
+  }
+  & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
+    font-weight: @ui-fontweight;
+    margin-top: @ui-unit-double;
+    margin-bottom: @ui-unit;
+  }
+
+  & > h1 {
+    font-size: 2em;
+  }
+
+  & > h2 {
+    font-size: 1.5em;
+  }
+
+  & > h3 {
+    font-size: 1.3em;
+  }
+  & > hr {
+    border: 1px solid #e6e6e6;
+  }
+  & > pre {
+    display: block;
+    margin: 0;
+    margin-bottom: @ui-unit;
+    padding: 0;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    color: @ui-color-black;
+    direction: ltr;
+    text-align: left;
+    .dox-mixin-stripes();
+    overflow-y: visible;
+    overflow-x: auto;
+    code {
+      font-size: @ui-fontsize;
+      display: block;
+      padding: @ui-unit;
+      line-height: @ui-unit;
+    }
+  }
+  & > pre + p {
+    margin-top: @ui-unit;
+  }
+  & > p > code,
+  & > ul li > code,
+  & > ol li > code,
+  & > table td > code,
+  & > h1 > code,
+  & > h2 > code,
+  & > h3 > code,
+  & > h4 > code,
+  & > h5 > code,
+  & > h6 > code,
+  & > blockquote code {
+    font-family: @ui-fontstack-mono;
+    font-size: 0.98em;
+    color: rgba(0, 0, 0, 0.8);
+    background: #e8e8e8;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    padding: 0.2em 0.4em;
+    margin: 0 1px;
+  }
+  & > blockquote {
+    background-color: lighten(@ui-color-gray-lightest, 4%);
+    border-left: 4px solid lighten(@ui-color-gray-light, 5%);
+    padding: @ui-unit-half @ui-unit;
+    font-style: italic;
+    margin-bottom: @ui-unit;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  & > table {
+    background-color: #fafafa;
+  }
+  & > table tr th,
+  & > table tr td {
+    border: 1px solid #e6e6e6;
+  }
+  & > table tr:nth-child(2n) {
+    background-color: #f2f2f2;
+  }
+  & > img {
+    // width: 100%;
+    margin-bottom: @ui-unit;
+  }
+  & > table {
+    width: 100%;
+    border: 1px solid #dedede;
+    margin: 15px auto;
+    border-collapse: collapse;
+    empty-cells: show;
+  }
+
+  & > table th,
+  & > table td {
+    height: 35px;
+    border: 1px solid @ui-color-gray-darkest;
+    padding: 0 @ui-unit-half;
+  }
+  & > table th {
+    font-weight: @ui-fontweight-medium;
+    text-align: center !important;
+    background-color: #eff3f5;
+  }
+  & > table tbody {
+    tr:nth-child(odd) {
+      background-color: @ui-color-white;
+    }
+    tr:nth-child(even) {
+      background-color: #fafbfc;
+    }
+  }
+  & > table tr:hover {
+    background: #efefef;
+  }
+}
