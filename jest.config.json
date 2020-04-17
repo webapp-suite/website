@@ -1,0 +1,20 @@
+{
+  "testEnvironment": "jest-environment-jsdom-global",
+  "testMatch": ["**/src/**/__tests__/**/*.[jt]s?(x)", "**/src/**/?(*.)+(spec|test).[jt]s?(x)"],
+  "testURL": "http://localhost",
+  "transform": {
+    "^.+\\.[t|j]sx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.(css|less|scss|sss|styl)$": "jest-css-modules"
+  },
+  "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$"],
+  "globals": {
+    "prefixCls": true
+  },
+  "setupFiles": ["./config/setupTests.js"],
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "collectCoverage": true,
+  "collectCoverageFrom": ["src/components/**/*.{js,jsx,ts,tsx}"],
+  "coverageDirectory": "./coverage/"
+}
