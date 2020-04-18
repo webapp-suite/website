@@ -4,11 +4,11 @@ const rimraf = require('rimraf')
 const LiveReloadPlugin = require('webpack-livereload-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const autoprefixer = require('autoprefixer')
-const parseCodeExample = require('../site/loaders/parseCodeExample')
-const Prism = require('../site/3rdParty/prism/prism.js')
-const sitePath = path.resolve(__dirname, '../site')
-const sourcePath = path.resolve(__dirname, '../src')
-const outputPath = path.resolve(__dirname, '../site/dist')
+const parseCodeExample = require('./src/loaders/parseCodeExample')
+const Prism = require('./src/3rdParty/prism/prism.js')
+const sitePath = path.resolve(__dirname, './src')
+const sourcePath = path.resolve(__dirname, '../src') // todo
+const outputPath = path.resolve(__dirname, './dist')
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -125,7 +125,7 @@ const config = {
   },
   resolveLoader: {
     alias: {
-      'docs-loader': path.join(__dirname, '../site/loaders/docs-loader')
+      'docs-loader': path.join(__dirname, './loaders/docs-loader')
     }
   },
   resolve: {
