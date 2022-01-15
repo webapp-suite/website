@@ -80,7 +80,7 @@
     "classlist": "^2.0.0",
     "classnames": "^2.2.5",
     "invariant": "^2.2.2",
-    "marked": "^0.7.0"
+    "marked": "^4.0.10"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
